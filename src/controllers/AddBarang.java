@@ -27,8 +27,10 @@ public class AddBarang {
             
             BufferedWriter bw = new BufferedWriter(fw);
             
-            fw.write(new_Barang.getID() + ";" + new_Barang.getNama() + ";" + new_Barang.getQuantity() + ";" + new_Barang.getHarga());
-            fw.write("\n");
+            bw.write(new_Barang.getID() + ";" + new_Barang.getNama() + ";" + new_Barang.getQuantity() + ";" + new_Barang.getHarga());
+            bw.newLine();
+            
+            bw.close();
             
         }catch(Exception e){
             
