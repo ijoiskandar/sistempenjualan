@@ -16,6 +16,7 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
+        System.out.println("----- Sistem Penjualan -----");
         System.out.println("1. View Item.");
         System.out.println("2. Add Item.");
         System.out.println("3. Delete Item.");
