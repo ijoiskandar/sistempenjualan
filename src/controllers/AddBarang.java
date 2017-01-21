@@ -11,4 +11,8 @@ package controllers;
  */
 public class AddBarang {
     
+    public void TambahBarang(){
+        
+    }
+    
 }
