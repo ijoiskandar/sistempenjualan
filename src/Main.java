@@ -10,6 +10,7 @@ import models.Barang;
  */
 
 import controllers.AddBarang;
+import controllers.DeleteBarang;
 import java.util.Scanner;
 
 /**
@@ -50,6 +51,11 @@ public class Main {
                 
                 break;
             case "3":
+                DeleteBarang barang = new DeleteBarang();
+                System.out.println("Masukkan ID : ");
+                String id = input.nextLine();
+                barang.delete(id);
+                menu();
                 break;
             case "4":
                 break;
