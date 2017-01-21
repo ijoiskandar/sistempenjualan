@@ -40,11 +40,11 @@ public class AmbilBarang {
     public void tampil(){
         AmbilBarang ab = new AmbilBarang();
         ArrayList<Barang> data = ab.getBarangs();
-        System.out.println(data.size());
-//        for (Barang string : data) {
-//            System.out.println(string.getNama());
-//            System.out.println(string.getHarga());
-//        }
+        for (Barang string : data) {
+            System.out.println("Nama : "+string.getNama());
+            System.out.println("Harga : "+string.getHarga());
+            System.out.println("Stok : "+string.getQuantity());
+        }
     }
     
 }
