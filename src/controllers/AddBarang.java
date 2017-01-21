@@ -9,6 +9,7 @@ package controllers;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Scanner;
 import models.Barang;
 /**
  *
@@ -16,9 +17,23 @@ import models.Barang;
  */
 public class AddBarang {
     
-    public void TambahBarang(String ID, String nama, int qty, int harga){
+    public void TambahBarang(){
         
-        Barang new_Barang = new Barang(ID, nama, qty, harga);
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Masukkan ID barang : ");
+        String new_id = scan.next();
+        
+        System.out.println("Masukkan nama Barang : ");
+        String new_nama = scan.next();
+        
+        System.out.println("Masukkan stock barang : ");
+        int new_stock = scan.nextInt();
+        
+        System.out.println("Masukkan harga barang : ");
+        int new_harga = scan.nextInt();
+        
+        Barang new_Barang = new Barang(new_id, new_nama, new_stock, new_harga);
         
         File file = new File("stock.txt");
         

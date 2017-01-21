@@ -45,7 +45,7 @@ public class Main {
             case "2":
                 
                 AddBarang add = new AddBarang();
-                add.TambahBarang("4", "Tango", 10, 400);
+                add.TambahBarang();
 
                 menu();
                 
