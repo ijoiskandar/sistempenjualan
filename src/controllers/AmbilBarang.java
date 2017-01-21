@@ -27,7 +27,7 @@ public class AmbilBarang {
             String line ="";
             while((line=baca.readLine())!=null){
                 String arr[] = line.split(";");
-                Barang b = new Barang(Integer.parseInt(arr[0]),Integer.parseInt(arr[1]), arr[2], arr[3]);
+                Barang b = new Barang((arr[0]),(arr[1]), Integer.parseInt(arr[2]), Integer.parseInt(arr[3]));
                 list.add(b);
             }
             baca.close();
@@ -35,6 +35,16 @@ public class AmbilBarang {
             e.printStackTrace();
         }
         return list;
+    }
+    
+    public void tampil(){
+        AmbilBarang ab = new AmbilBarang();
+        ArrayList<Barang> data = ab.getBarangs();
+        System.out.println(data.size());
+//        for (Barang string : data) {
+//            System.out.println(string.getNama());
+//            System.out.println(string.getHarga());
+//        }
     }
     
 }

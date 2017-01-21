@@ -10,13 +10,13 @@ package models;
  * @author alfianh
  */
 public class Barang {
-    
+
+    String ID;
+    String nama;
     int harga;
     int quantity;
-    String nama;
-    String ID;
 
-    public Barang(int harga, int quantity, String nama, String ID) {
+    public Barang(String ID, String nama, int quantity, int harga) {
         this.harga = harga;
         this.quantity = quantity;
         this.nama = nama;
@@ -54,7 +54,5 @@ public class Barang {
     public void setID(String ID) {
         this.ID = ID;
     }
-    
-    
-    
+
 }
