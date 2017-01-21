@@ -16,7 +16,9 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("----- Sistem Penjualan -----");
+        int pilihMenu;
+        do{
+            System.out.println("----- Sistem Penjualan -----");
         System.out.println("1. View Item.");
         System.out.println("2. Add Item.");
         System.out.println("3. Delete Item.");
@@ -24,8 +26,7 @@ public class Main {
         System.out.println("5. Sell Item.");
         System.out.println("0. Quit.");
         Scanner input = new Scanner(System.in);
-        int pilihMenu = (input.nextInt());
-        do{
+        pilihMenu = (input.nextInt());
             switch(pilihMenu){
                 case 1:
                     AmbilBarang ab = new AmbilBarang();
