@@ -18,15 +18,7 @@ public class Main {
     public static void main(String[] args) {
         int pilihMenu;
         do{
-            System.out.println("----- Sistem Penjualan -----");
-        System.out.println("1. View Item.");
-        System.out.println("2. Add Item.");
-        System.out.println("3. Delete Item.");
-        System.out.println("4. Purchase Item.");
-        System.out.println("5. Sell Item.");
-        System.out.println("0. Quit.");
-        Scanner input = new Scanner(System.in);
-        pilihMenu = (input.nextInt());
+            pilihMenu = menu();
             switch(pilihMenu){
                 case 1:
                     AmbilBarang ab = new AmbilBarang();
@@ -44,5 +36,17 @@ public class Main {
                     break;
             }
         }while(pilihMenu != 0);
+    }
+    
+    public static int menu(){
+            System.out.println("----- Sistem Penjualan -----");
+            System.out.println("1. View Item.");
+            System.out.println("2. Add Item.");
+            System.out.println("3. Delete Item.");
+            System.out.println("4. Purchase Item.");
+            System.out.println("5. Sell Item.");
+            System.out.println("0. Quit.");
+            Scanner input = new Scanner(System.in);
+            return (input.nextInt());
     }
 }
