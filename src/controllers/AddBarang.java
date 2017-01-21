@@ -5,13 +5,22 @@
  */
 package controllers;
 
+
+import java.io.File;
+import models.Barang;
 /**
  *
  * @author alfianh
  */
 public class AddBarang {
     
-    public void TambahBarang(){
+    public void TambahBarang(String ID, String nama, int qty, int harga){
+        
+        Barang new_Barang = new Barang(ID, nama, qty, harga);
+        
+        File file = new File("stock.txt");
+        
+        
         
     }
     
