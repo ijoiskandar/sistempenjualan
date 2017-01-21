@@ -6,7 +6,9 @@
 package controllers;
 
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import models.Barang;
 /**
  *
@@ -19,6 +21,17 @@ public class AddBarang {
         Barang new_Barang = new Barang(ID, nama, qty, harga);
         
         File file = new File("stock.txt");
+        
+        try{
+            FileWriter fw = new FileWriter(file, true);
+            
+            BufferedWriter bw = new BufferedWriter(fw);
+            
+            fw.write("");
+            
+        }catch(Exception e){
+            
+        }
         
         
         
